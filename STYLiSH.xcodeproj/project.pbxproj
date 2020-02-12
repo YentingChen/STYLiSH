@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185C08AFB251ACAC21BE733C /* Pods_STYLiSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9ADC5DBEFF2357883EA8CF /* Pods_STYLiSH.framework */; };
 		9D5AD5A223F3A859009D258C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5A123F3A859009D258C /* AppDelegate.swift */; };
 		9D5AD5A423F3A859009D258C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5A323F3A859009D258C /* SceneDelegate.swift */; };
 		9D5AD5A623F3A859009D258C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5A523F3A859009D258C /* ViewController.swift */; };
@@ -14,9 +15,17 @@
 		9D5AD5AC23F3A859009D258C /* STYLiSH.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5AA23F3A859009D258C /* STYLiSH.xcdatamodeld */; };
 		9D5AD5AE23F3A85C009D258C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AD5AD23F3A85C009D258C /* Assets.xcassets */; };
 		9D5AD5B123F3A85C009D258C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AD5AF23F3A85C009D258C /* LaunchScreen.storyboard */; };
+		9D5AD5B923F3A937009D258C /* KingFisherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5B823F3A937009D258C /* KingFisherWrapper.swift */; };
+		9D5AD5BB23F3ABFB009D258C /* STTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5BA23F3ABFB009D258C /* STTabBarViewController.swift */; };
+		9D5AD5BD23F3B4DF009D258C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5BC23F3B4DF009D258C /* UIImage+Extension.swift */; };
+		9D5AD5BF23F3B675009D258C /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5BE23F3B675009D258C /* LobbyViewController.swift */; };
+		9D5AD5C123F3BA76009D258C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5C023F3BA76009D258C /* Product.swift */; };
+		9D5AD5C323F3BAEC009D258C /* MarketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5C223F3BAEC009D258C /* MarketProvider.swift */; };
+		9D5AD5C523F3BB76009D258C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5C423F3BB76009D258C /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F9ADC5DBEFF2357883EA8CF /* Pods_STYLiSH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STYLiSH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5AD59E23F3A859009D258C /* STYLiSH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STYLiSH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5AD5A123F3A859009D258C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D5AD5A323F3A859009D258C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,15 @@
 		9D5AD5AD23F3A85C009D258C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D5AD5B023F3A85C009D258C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D5AD5B223F3A85C009D258C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D5AD5B823F3A937009D258C /* KingFisherWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherWrapper.swift; sourceTree = "<group>"; };
+		9D5AD5BA23F3ABFB009D258C /* STTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTabBarViewController.swift; sourceTree = "<group>"; };
+		9D5AD5BC23F3B4DF009D258C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		9D5AD5BE23F3B675009D258C /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
+		9D5AD5C023F3BA76009D258C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		9D5AD5C223F3BAEC009D258C /* MarketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketProvider.swift; sourceTree = "<group>"; };
+		9D5AD5C423F3BB76009D258C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		B77280C88034CB231330D47D /* Pods-STYLiSH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STYLiSH.debug.xcconfig"; path = "Target Support Files/Pods-STYLiSH/Pods-STYLiSH.debug.xcconfig"; sourceTree = "<group>"; };
+		DAF65D63DEE7DF341D40F79C /* Pods-STYLiSH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STYLiSH.release.xcconfig"; path = "Target Support Files/Pods-STYLiSH/Pods-STYLiSH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185C08AFB251ACAC21BE733C /* Pods_STYLiSH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		412A3BFD09224287F86E4915 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B77280C88034CB231330D47D /* Pods-STYLiSH.debug.xcconfig */,
+				DAF65D63DEE7DF341D40F79C /* Pods-STYLiSH.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5E2402AFDD7D7A811679A44A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F9ADC5DBEFF2357883EA8CF /* Pods_STYLiSH.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D5AD59523F3A859009D258C = {
 			isa = PBXGroup;
 			children = (
 				9D5AD5A023F3A859009D258C /* STYLiSH */,
 				9D5AD59F23F3A859009D258C /* Products */,
+				412A3BFD09224287F86E4915 /* Pods */,
+				5E2402AFDD7D7A811679A44A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +104,13 @@
 				9D5AD5AF23F3A85C009D258C /* LaunchScreen.storyboard */,
 				9D5AD5B223F3A85C009D258C /* Info.plist */,
 				9D5AD5AA23F3A859009D258C /* STYLiSH.xcdatamodeld */,
+				9D5AD5B823F3A937009D258C /* KingFisherWrapper.swift */,
+				9D5AD5BA23F3ABFB009D258C /* STTabBarViewController.swift */,
+				9D5AD5BC23F3B4DF009D258C /* UIImage+Extension.swift */,
+				9D5AD5BE23F3B675009D258C /* LobbyViewController.swift */,
+				9D5AD5C023F3BA76009D258C /* Product.swift */,
+				9D5AD5C223F3BAEC009D258C /* MarketProvider.swift */,
+				9D5AD5C423F3BB76009D258C /* HTTPClient.swift */,
 			);
 			path = STYLiSH;
 			sourceTree = "<group>";
@@ -77,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D5AD5B523F3A85C009D258C /* Build configuration list for PBXNativeTarget "STYLiSH" */;
 			buildPhases = (
+				7AB94F3335F28ECBFABC9796 /* [CP] Check Pods Manifest.lock */,
 				9D5AD59A23F3A859009D258C /* Sources */,
 				9D5AD59B23F3A859009D258C /* Frameworks */,
 				9D5AD59C23F3A859009D258C /* Resources */,
+				52E03D7647C49795D69382B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,15 +183,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52E03D7647C49795D69382B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-STYLiSH/Pods-STYLiSH-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-STYLiSH/Pods-STYLiSH-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-STYLiSH/Pods-STYLiSH-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AB94F3335F28ECBFABC9796 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-STYLiSH-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D5AD59A23F3A859009D258C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5AD5B923F3A937009D258C /* KingFisherWrapper.swift in Sources */,
+				9D5AD5BD23F3B4DF009D258C /* UIImage+Extension.swift in Sources */,
+				9D5AD5C123F3BA76009D258C /* Product.swift in Sources */,
 				9D5AD5AC23F3A859009D258C /* STYLiSH.xcdatamodeld in Sources */,
+				9D5AD5BF23F3B675009D258C /* LobbyViewController.swift in Sources */,
 				9D5AD5A623F3A859009D258C /* ViewController.swift in Sources */,
+				9D5AD5C523F3BB76009D258C /* HTTPClient.swift in Sources */,
 				9D5AD5A223F3A859009D258C /* AppDelegate.swift in Sources */,
 				9D5AD5A423F3A859009D258C /* SceneDelegate.swift in Sources */,
+				9D5AD5C323F3BAEC009D258C /* MarketProvider.swift in Sources */,
+				9D5AD5BB23F3ABFB009D258C /* STTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,17 +382,20 @@
 		};
 		9D5AD5B623F3A85C009D258C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77280C88034CB231330D47D /* Pods-STYLiSH.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QWH3GTU5W3;
+				DEVELOPMENT_TEAM = UNAH767L53;
 				INFOPLIST_FILE = STYLiSH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yenting.STYLiSH;
+				PRODUCT_BUNDLE_IDENTIFIER = yentingchen.STYLiSH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,17 +403,20 @@
 		};
 		9D5AD5B723F3A85C009D258C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAF65D63DEE7DF341D40F79C /* Pods-STYLiSH.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QWH3GTU5W3;
+				DEVELOPMENT_TEAM = UNAH767L53;
 				INFOPLIST_FILE = STYLiSH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yenting.STYLiSH;
+				PRODUCT_BUNDLE_IDENTIFIER = yentingchen.STYLiSH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
