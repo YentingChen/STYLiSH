@@ -13,17 +13,24 @@ import Foundation
 class LobbyViewController: UIViewController {
     
     let marketProvider = MarketProvider()
-    let tableView = UITableView()
-    var datas: [PromotedProducts] = []
+    
+    var lobbyView = LobbyView() {
+        didSet {
+            lobbyView.delegate = self
+        }
+    }
+    
+    var datas: [PromotedProducts] = [] {
+        
+        didSet {
+            lobbyView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.frame = self.view.frame
-        tableView.backgroundColor = .orange
-        tableView.delegate = self
-        tableView.dataSource = self
-        self.view.addSubview(tableView)
-        tableView.register(LobbyTableViewCell.self, forCellReuseIdentifier: String(describing: LobbyTableViewCell.self))
+        lobbyView = LobbyView(frame: self.view.frame)
+        self.view.addSubview(lobbyView)
         fetchData()
     }
     
@@ -33,9 +40,6 @@ class LobbyViewController: UIViewController {
             case .success(let products):
 
                 self?.datas = products
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
 
             case .failure:
                 break
@@ -45,7 +49,13 @@ class LobbyViewController: UIViewController {
     
 }
 
-extension LobbyViewController: UITableViewDelegate, UITableViewDataSource {
+extension LobbyViewController: LobbyViewDelegate {
+    
+    func triggerRefresh(_ lobbyView: LobbyView) {
+        
+    }
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return datas.count
     }
@@ -55,31 +65,20 @@ extension LobbyViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: String(describing: LobbyTableViewCell.self),
-            for: indexPath
-        )
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: LobbyTableViewCell.self), for: indexPath)
 
         guard let lobbyCell = cell as? LobbyTableViewCell else { return cell }
-//        lobbyCell.backgroundColor = .systemPink
 
         let product = datas[indexPath.section].products[indexPath.row]
 
         if indexPath.row % 2 == 0 {
 
-            lobbyCell.singlePage(
-                img: product.mainImage,
-                title: product.title,
-                description: product.description
-            )
+            lobbyCell.singlePage(img: product.mainImage, title: product.title, description: product.description)
 
         } else {
 
-            lobbyCell.multiplePages(
-                imgs: product.images,
-                title: product.title,
-                description: product.description
-            )
+            lobbyCell.multiplePages(imgs: product.images, title: product.title, description: product.description)
         }
 
         return lobbyCell
@@ -89,10 +88,20 @@ extension LobbyViewController: UITableViewDelegate, UITableViewDataSource {
         
         return 258
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { return 67.0 }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing: LobbyTableViewHeaderView.self)) as? LobbyTableViewHeaderView else { return nil }
+        
+        headerView.titleLabel.text = datas[section].title
+        
+        return headerView
+    }
 
 }
 
-protocol LobbyViewDelegate: AnyObject {
+protocol LobbyViewDelegate: AnyObject, UITableViewDelegate, UITableViewDataSource {
     
     func triggerRefresh(_ lobbyView: LobbyView)
 }
@@ -101,16 +110,16 @@ class LobbyView: UIView {
     
     weak var delegate: LobbyViewDelegate? {
         didSet {
-//            tableView.dataSource = self.delegate
-//            tableView.delegate = self.delegate
+            tableView.dataSource = self.delegate
+            tableView.delegate = self.delegate
         }
     }
     
-    var tableView = UITableView() {
+    var tableView = UITableView(frame: CGRect(), style: .grouped) {
         
         didSet {
-//            tableView.dataSource = self.delegate
-//            tableView.delegate = self.delegate
+            tableView.dataSource = self.delegate
+            tableView.delegate = self.delegate
         }
     }
     
@@ -125,17 +134,23 @@ class LobbyView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupTableView()
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupTableView()
+    }
+    
     private func setupTableView() {
         tableView.frame = self.frame
         self.addSubview(tableView)
-//        tableView.register(LobbyTableViewCell.self, forCellReuseIdentifier: String(describing: LobbyTableViewCell.self))
+        tableView.register(LobbyTableViewCell.self, forCellReuseIdentifier: String(describing: LobbyTableViewCell.self))
+        tableView.register(LobbyTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: String(describing: LobbyTableViewHeaderView.self))
         self.delegate?.triggerRefresh(self)
     }
 }
@@ -143,15 +158,40 @@ class LobbyView: UIView {
 
 class LobbyTableViewCell: UITableViewCell {
     
-    var singleImgView =  UIImageView()
+    var singleImgView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
 
-    var leftImgView = UIImageView()
+    var leftImgView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
 
-    var middleTopImgView =  UIImageView()
+    var middleTopImgView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
 
-    var middleBottomImgView = UIImageView()
+    var middleBottomImgView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
 
-    var rightImgView = UIImageView()
+    var rightImgView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
 
     var titleLabel =  UILabel()
 
@@ -168,12 +208,13 @@ class LobbyTableViewCell: UITableViewCell {
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        subviewsConstraintSettingUp()
+//        subviewsConstraintSettingUp()
     }
     
     func subviewsConstraintSettingUp() {
 
-        let subViews = [singleImgView, leftImgView, middleTopImgView, middleBottomImgView, rightImgView, titleLabel, descriptionLabel]
+        let subViews = [leftImgView, middleTopImgView, middleBottomImgView, rightImgView, titleLabel, descriptionLabel, singleImgView]
+        
         for view in subViews {
             self.addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = false
@@ -193,19 +234,19 @@ class LobbyTableViewCell: UITableViewCell {
 
         let middleTopImgViewConstraints = [
         middleTopImgView.topAnchor.constraint(equalTo: self.topAnchor),
-        middleTopImgView.leadingAnchor.constraint(equalTo: leftImgView.leadingAnchor, constant: 2),
+        middleTopImgView.leadingAnchor.constraint(equalTo: leftImgView.trailingAnchor, constant: 2),
         middleTopImgView.widthAnchor.constraint(equalToConstant: 84),
         middleTopImgView.heightAnchor.constraint(equalToConstant: 84)]
 
         let middleBottomImgViewConstraints = [
         middleBottomImgView.topAnchor.constraint(equalTo: middleTopImgView.bottomAnchor, constant: 2),
-        middleBottomImgView.leadingAnchor.constraint(equalTo: leftImgView.leadingAnchor, constant: 2),
+        middleBottomImgView.leadingAnchor.constraint(equalTo: leftImgView.trailingAnchor, constant: 2),
         middleBottomImgView.widthAnchor.constraint(equalToConstant: 84),
         middleBottomImgView.heightAnchor.constraint(equalToConstant: 84)]
 
         let rightImgViewConstraints = [
         rightImgView.topAnchor.constraint(equalTo: self.topAnchor),
-        rightImgView.leadingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+        rightImgView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
         rightImgView.widthAnchor.constraint(equalToConstant: 85),
         rightImgView.heightAnchor.constraint(equalToConstant: 170)]
 
@@ -253,4 +294,38 @@ class LobbyTableViewCell: UITableViewCell {
         descriptionLabel.text = description
     }
     
+}
+class LobbyTableViewHeaderView: UITableViewHeaderFooterView {
+
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        return label
+    }()
+    
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        setupLayout()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        setupLayout()
+    }
+    
+    private func setupLayout() {
+        
+        contentView.backgroundColor = .white
+        
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 24),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16)
+            
+        ])
+    }
+
 }
