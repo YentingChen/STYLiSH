@@ -58,6 +58,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EB5855123F4455E003FD411 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AD5C423F3BB76009D258C /* HTTPClient.swift */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		3EB5855223F4457F003FD411 /* Third_Party_Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AD5B823F3A937009D258C /* KingFisherWrapper.swift */,
+			);
+			path = Third_Party_Wrapper;
+			sourceTree = "<group>";
+		};
+		3EB5855323F4459C003FD411 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AD5BC23F3B4DF009D258C /* UIImage+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3EB5855423F445B9003FD411 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AD5BE23F3B675009D258C /* LobbyViewController.swift */,
+				9D5AD5BA23F3ABFB009D258C /* STTabBarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3EB5855523F445F0003FD411 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AD5C023F3BA76009D258C /* Product.swift */,
+				9D5AD5C223F3BAEC009D258C /* MarketProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		412A3BFD09224287F86E4915 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +146,11 @@
 				9D5AD5AF23F3A85C009D258C /* LaunchScreen.storyboard */,
 				9D5AD5B223F3A85C009D258C /* Info.plist */,
 				9D5AD5AA23F3A859009D258C /* STYLiSH.xcdatamodeld */,
-				9D5AD5B823F3A937009D258C /* KingFisherWrapper.swift */,
-				9D5AD5BA23F3ABFB009D258C /* STTabBarViewController.swift */,
-				9D5AD5BC23F3B4DF009D258C /* UIImage+Extension.swift */,
-				9D5AD5BE23F3B675009D258C /* LobbyViewController.swift */,
-				9D5AD5C023F3BA76009D258C /* Product.swift */,
-				9D5AD5C223F3BAEC009D258C /* MarketProvider.swift */,
-				9D5AD5C423F3BB76009D258C /* HTTPClient.swift */,
+				3EB5855323F4459C003FD411 /* Extension */,
+				3EB5855223F4457F003FD411 /* Third_Party_Wrapper */,
+				3EB5855423F445B9003FD411 /* ViewController */,
+				3EB5855523F445F0003FD411 /* Model */,
+				3EB5855123F4455E003FD411 /* HTTPClient */,
 			);
 			path = STYLiSH;
 			sourceTree = "<group>";
