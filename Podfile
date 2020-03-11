@@ -7,5 +7,6 @@ target 'STYLiSH' do
 
   # Pods for STYLiSH
   pod 'Kingfisher'
+  pod 'Alamofire', '~> 4.0'
 
 end
