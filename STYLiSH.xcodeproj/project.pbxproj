@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		185C08AFB251ACAC21BE733C /* Pods_STYLiSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9ADC5DBEFF2357883EA8CF /* Pods_STYLiSH.framework */; };
+		9D519D2F2419DD7500CE8684 /* HotsCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D519D2E2419DD7500CE8684 /* HotsCodable.swift */; };
+		9D519D312419DDA800CE8684 /* LobbyTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D519D302419DDA800CE8684 /* LobbyTableViewCellViewModel.swift */; };
+		9D519D352419DE1E00CE8684 /* AppServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D519D342419DE1E00CE8684 /* AppServerClient.swift */; };
+		9D519D372419DE5E00CE8684 /* LobbyViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D519D362419DE5E00CE8684 /* LobbyViewViewModel.swift */; };
+		9D519D392419DE9700CE8684 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D519D382419DE9700CE8684 /* Bindable.swift */; };
+		9D519D3D2419DEEA00CE8684 /* LobbyOddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D519D3C2419DEEA00CE8684 /* LobbyOddTableViewCell.swift */; };
+		9D519D3F2419E02700CE8684 /* LobbyTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D519D3E2419E02700CE8684 /* LobbyTableViewHeaderView.swift */; };
+		9D519D41241A26E200CE8684 /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D519D40241A26E200CE8684 /* LobbyView.swift */; };
 		9D5AD5A223F3A859009D258C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5A123F3A859009D258C /* AppDelegate.swift */; };
 		9D5AD5A423F3A859009D258C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5A323F3A859009D258C /* SceneDelegate.swift */; };
 		9D5AD5A623F3A859009D258C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5A523F3A859009D258C /* ViewController.swift */; };
@@ -26,6 +34,14 @@
 
 /* Begin PBXFileReference section */
 		2F9ADC5DBEFF2357883EA8CF /* Pods_STYLiSH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STYLiSH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D519D2E2419DD7500CE8684 /* HotsCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotsCodable.swift; sourceTree = "<group>"; };
+		9D519D302419DDA800CE8684 /* LobbyTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		9D519D342419DE1E00CE8684 /* AppServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerClient.swift; sourceTree = "<group>"; };
+		9D519D362419DE5E00CE8684 /* LobbyViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewViewModel.swift; sourceTree = "<group>"; };
+		9D519D382419DE9700CE8684 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		9D519D3C2419DEEA00CE8684 /* LobbyOddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LobbyOddTableViewCell.swift; path = /Users/yentingchen/Documents/Yenting/STYLiSH/STYLiSH/View/LobbyOddTableViewCell.swift; sourceTree = "<absolute>"; };
+		9D519D3E2419E02700CE8684 /* LobbyTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyTableViewHeaderView.swift; sourceTree = "<group>"; };
+		9D519D40241A26E200CE8684 /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
 		9D5AD59E23F3A859009D258C /* STYLiSH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STYLiSH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5AD5A123F3A859009D258C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D5AD5A323F3A859009D258C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +112,7 @@
 			children = (
 				9D5AD5C023F3BA76009D258C /* Product.swift */,
 				9D5AD5C223F3BAEC009D258C /* MarketProvider.swift */,
+				9D519D2E2419DD7500CE8684 /* HotsCodable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +132,25 @@
 				2F9ADC5DBEFF2357883EA8CF /* Pods_STYLiSH.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D519D3A2419DED100CE8684 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9D519D302419DDA800CE8684 /* LobbyTableViewCellViewModel.swift */,
+				9D519D362419DE5E00CE8684 /* LobbyViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9D519D3B2419DEDE00CE8684 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D519D3C2419DEEA00CE8684 /* LobbyOddTableViewCell.swift */,
+				9D519D3E2419E02700CE8684 /* LobbyTableViewHeaderView.swift */,
+				9D519D40241A26E200CE8684 /* LobbyView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9D5AD59523F3A859009D258C = {
@@ -146,6 +182,10 @@
 				9D5AD5AF23F3A85C009D258C /* LaunchScreen.storyboard */,
 				9D5AD5B223F3A85C009D258C /* Info.plist */,
 				9D5AD5AA23F3A859009D258C /* STYLiSH.xcdatamodeld */,
+				9D519D342419DE1E00CE8684 /* AppServerClient.swift */,
+				9D519D382419DE9700CE8684 /* Bindable.swift */,
+				9D519D3B2419DEDE00CE8684 /* View */,
+				9D519D3A2419DED100CE8684 /* ViewModel */,
 				3EB5855323F4459C003FD411 /* Extension */,
 				3EB5855223F4457F003FD411 /* Third_Party_Wrapper */,
 				3EB5855423F445B9003FD411 /* ViewController */,
@@ -270,17 +310,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D519D3D2419DEEA00CE8684 /* LobbyOddTableViewCell.swift in Sources */,
+				9D519D312419DDA800CE8684 /* LobbyTableViewCellViewModel.swift in Sources */,
 				9D5AD5B923F3A937009D258C /* KingFisherWrapper.swift in Sources */,
+				9D519D372419DE5E00CE8684 /* LobbyViewViewModel.swift in Sources */,
 				9D5AD5BD23F3B4DF009D258C /* UIImage+Extension.swift in Sources */,
 				9D5AD5C123F3BA76009D258C /* Product.swift in Sources */,
+				9D519D3F2419E02700CE8684 /* LobbyTableViewHeaderView.swift in Sources */,
 				9D5AD5AC23F3A859009D258C /* STYLiSH.xcdatamodeld in Sources */,
+				9D519D392419DE9700CE8684 /* Bindable.swift in Sources */,
 				9D5AD5BF23F3B675009D258C /* LobbyViewController.swift in Sources */,
 				9D5AD5A623F3A859009D258C /* ViewController.swift in Sources */,
 				9D5AD5C523F3BB76009D258C /* HTTPClient.swift in Sources */,
 				9D5AD5A223F3A859009D258C /* AppDelegate.swift in Sources */,
+				9D519D2F2419DD7500CE8684 /* HotsCodable.swift in Sources */,
 				9D5AD5A423F3A859009D258C /* SceneDelegate.swift in Sources */,
+				9D519D352419DE1E00CE8684 /* AppServerClient.swift in Sources */,
 				9D5AD5C323F3BAEC009D258C /* MarketProvider.swift in Sources */,
 				9D5AD5BB23F3ABFB009D258C /* STTabBarViewController.swift in Sources */,
+				9D519D41241A26E200CE8684 /* LobbyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
