@@ -22,7 +22,7 @@ private enum Tab {
         case .lobby:
             controller = UINavigationController(rootViewController: LobbyViewController())
         case .product:
-            controller = UIViewController()
+            controller = UINavigationController(rootViewController: ProductViewController())
         case .profile:
             controller = UIViewController()
         case .trolley:

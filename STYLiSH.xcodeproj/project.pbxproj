@@ -30,6 +30,8 @@
 		9D5AD5C123F3BA76009D258C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5C023F3BA76009D258C /* Product.swift */; };
 		9D5AD5C323F3BAEC009D258C /* MarketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5C223F3BAEC009D258C /* MarketProvider.swift */; };
 		9D5AD5C523F3BB76009D258C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD5C423F3BB76009D258C /* HTTPClient.swift */; };
+		9DD8E638241B39CC004BDC68 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD8E637241B39CC004BDC68 /* ProductViewController.swift */; };
+		9DD8E63A241B3AE3004BDC68 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD8E639241B3AE3004BDC68 /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		9D5AD5C023F3BA76009D258C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9D5AD5C223F3BAEC009D258C /* MarketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketProvider.swift; sourceTree = "<group>"; };
 		9D5AD5C423F3BB76009D258C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		9DD8E637241B39CC004BDC68 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		9DD8E639241B3AE3004BDC68 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		B77280C88034CB231330D47D /* Pods-STYLiSH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STYLiSH.debug.xcconfig"; path = "Target Support Files/Pods-STYLiSH/Pods-STYLiSH.debug.xcconfig"; sourceTree = "<group>"; };
 		DAF65D63DEE7DF341D40F79C /* Pods-STYLiSH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STYLiSH.release.xcconfig"; path = "Target Support Files/Pods-STYLiSH/Pods-STYLiSH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +105,8 @@
 		3EB5855423F445B9003FD411 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9D5AD5BE23F3B675009D258C /* LobbyViewController.swift */,
+				9DD8E637241B39CC004BDC68 /* ProductViewController.swift */,
+				9DD8E636241B393A004BDC68 /* Lobby */,
 				9D5AD5BA23F3ABFB009D258C /* STTabBarViewController.swift */,
 			);
 			path = ViewController;
@@ -146,9 +151,8 @@
 		9D519D3B2419DEDE00CE8684 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9D519D3C2419DEEA00CE8684 /* LobbyOddTableViewCell.swift */,
-				9D519D3E2419E02700CE8684 /* LobbyTableViewHeaderView.swift */,
-				9D519D40241A26E200CE8684 /* LobbyView.swift */,
+				9DD8E63B241B4360004BDC68 /* Lobby */,
+				9DD8E639241B3AE3004BDC68 /* CustomSegmentedControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +197,24 @@
 				3EB5855123F4455E003FD411 /* HTTPClient */,
 			);
 			path = STYLiSH;
+			sourceTree = "<group>";
+		};
+		9DD8E636241B393A004BDC68 /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				9D5AD5BE23F3B675009D258C /* LobbyViewController.swift */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
+		9DD8E63B241B4360004BDC68 /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				9D519D3C2419DEEA00CE8684 /* LobbyOddTableViewCell.swift */,
+				9D519D3E2419E02700CE8684 /* LobbyTableViewHeaderView.swift */,
+				9D519D40241A26E200CE8684 /* LobbyView.swift */,
+			);
+			path = Lobby;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,10 +346,12 @@
 				9D5AD5C523F3BB76009D258C /* HTTPClient.swift in Sources */,
 				9D5AD5A223F3A859009D258C /* AppDelegate.swift in Sources */,
 				9D519D2F2419DD7500CE8684 /* HotsCodable.swift in Sources */,
+				9DD8E63A241B3AE3004BDC68 /* CustomSegmentedControl.swift in Sources */,
 				9D5AD5A423F3A859009D258C /* SceneDelegate.swift in Sources */,
 				9D519D352419DE1E00CE8684 /* AppServerClient.swift in Sources */,
 				9D5AD5C323F3BAEC009D258C /* MarketProvider.swift in Sources */,
 				9D5AD5BB23F3ABFB009D258C /* STTabBarViewController.swift in Sources */,
+				9DD8E638241B39CC004BDC68 /* ProductViewController.swift in Sources */,
 				9D519D41241A26E200CE8684 /* LobbyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

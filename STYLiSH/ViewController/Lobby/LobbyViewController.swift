@@ -11,6 +11,7 @@ import Foundation
 
 class LobbyViewController: UIViewController{
     
+    
     var lobbyView = LobbyView() {
         didSet {
             lobbyView.delegate = self
@@ -21,6 +22,7 @@ class LobbyViewController: UIViewController{
         super.viewDidLoad()
         tableViewSettingUp()
         lobbyView.viewModel.getHots()
+        UISegmentedControl()
     }
     
     override func viewWillAppear(_ animated: Bool) {

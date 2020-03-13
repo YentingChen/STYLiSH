@@ -16,11 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var tabbarController = STTabBarViewController()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
-//        let vc = UIViewController()
-//        vc.view.backgroundColor = .systemPink
         window?.rootViewController = tabbarController
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
         return true
     }
 
