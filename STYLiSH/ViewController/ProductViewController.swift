@@ -30,9 +30,6 @@ class ProductViewController: UIViewController {
         redButton.addTarget(self, action: #selector(redButtonTapped), for: .touchUpInside)
         orangeButton.addTarget(self, action: #selector(orangeButtonTapped), for: .touchUpInside)
         codeSegmented.setButtonTitles(buttonTitles: ["女裝", "男裝", "配件"])
-        codeSegmented.selectorTextColor = UIColor.black
-        codeSegmented.selectorViewColor = UIColor.black
-        codeSegmented.textColor = UIColor.black.withAlphaComponent(0.25)
     }
     
     @objc func redButtonTapped() {

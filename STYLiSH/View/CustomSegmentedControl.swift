@@ -13,10 +13,11 @@ class CustomSegmentedControl: UIView {
     private var buttonTitles: [String] = ["選擇 0", "選擇 1"]
     private var buttons = [UIButton]()
     private var selectorView: UIView!
+    private var underLineView: UIView!
     
-    var textColor: UIColor = .black
-    var selectorViewColor: UIColor = .red
-    var selectorTextColor: UIColor = .red
+    var textColor: UIColor = UIColor.brownGrey
+    var selectorViewColor: UIColor = UIColor.greyishBrown
+    var selectorTextColor: UIColor = UIColor.greyishBrown
     var selectedIndex: Int = 0 {
         didSet {
             selectedButtonChangedAction(selectedIndex: selectedIndex)
@@ -59,7 +60,12 @@ class CustomSegmentedControl: UIView {
         selectorView = UIView(frame: CGRect(x: selectorPosition, y: self.frame.height, width: selectorWidth, height: 2))
         selectorView.backgroundColor = selectorViewColor
         addSubview(selectorView)
-        
+    }
+    
+    private func configUnderLineView() {
+        underLineView = UIView(frame: CGRect(x: 0, y: self.frame.height, width: self.frame.width, height: 1))
+        underLineView.backgroundColor = UIColor.black25
+        addSubview(underLineView)
     }
     
     private func createButton() {
@@ -84,25 +90,11 @@ class CustomSegmentedControl: UIView {
                 selectedIndex = buttonIndex
             }
         }
-        
-//        for (buttonIndex, btn) in buttons.enumerated() {
-//            btn.isSelected = false
-//            if btn == sender {
-//                let selectorPosition = frame.width/CGFloat(buttonTitles.count) * CGFloat(buttonIndex)
-//                selectedIndex = buttonIndex
-//
-//                UIView.animate(withDuration: 0.3) {
-//                    self.selectorView.frame.origin.x = selectorPosition
-//                }
-//                btn.isSelected = true
-//            } else {
-//                btn.isSelected = false
-//            }
-//        }
     }
     
     private func updateView() {
         createButton()
+        configUnderLineView()
         configSelectorView()
         configStackView()
     }

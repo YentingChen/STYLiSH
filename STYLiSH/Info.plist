@@ -43,5 +43,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSansCJKtc-Regular.ttgf</string>
+		<string>NotoSansCJKtc-Medium.ttf</string>
+	</array>
 </dict>
 </plist>

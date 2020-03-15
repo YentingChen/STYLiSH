@@ -18,7 +18,8 @@ class LobbyTableViewHeaderView: UITableViewHeaderFooterView {
 
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .greyishBrown
+        label.font = UIFont.setFont(font: .NotoSansCJKtc_Medium, size: 18)
         return label
     }()
 
